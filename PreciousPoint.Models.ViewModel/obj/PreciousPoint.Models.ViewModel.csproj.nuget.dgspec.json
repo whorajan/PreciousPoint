@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/PreciousPoint.Models.ViewModel.csproj": {}
+  },
+  "projects": {
+    "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/PreciousPoint.Models.DataModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/PreciousPoint.Models.DataModel.csproj",
+        "projectName": "PreciousPoint.Models.DataModel",
+        "projectPath": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/PreciousPoint.Models.DataModel.csproj",
+        "packagesPath": "/Users/whorajan/.nuget/packages/",
+        "outputPath": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/whorajan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/PreciousPoint.Models.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/PreciousPoint.Models.ViewModel.csproj",
+        "projectName": "PreciousPoint.Models.ViewModel",
+        "projectPath": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/PreciousPoint.Models.ViewModel.csproj",
+        "packagesPath": "/Users/whorajan/.nuget/packages/",
+        "outputPath": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/whorajan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/PreciousPoint.Models.DataModel.csproj": {
+                "projectPath": "/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/PreciousPoint.Models.DataModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

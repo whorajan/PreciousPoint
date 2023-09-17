@@ -1,0 +1,12 @@
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/bin/Debug/net7.0/PreciousPoint.Models.DataModel.deps.json
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/bin/Debug/net7.0/PreciousPoint.Models.DataModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/bin/Debug/net7.0/PreciousPoint.Models.DataModel.pdb
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.csproj.AssemblyReference.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.AssemblyInfoInputs.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.AssemblyInfo.cs
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.csproj.CoreCompileInputs.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/refint/PreciousPoint.Models.DataModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.pdb
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/ref/PreciousPoint.Models.DataModel.dll

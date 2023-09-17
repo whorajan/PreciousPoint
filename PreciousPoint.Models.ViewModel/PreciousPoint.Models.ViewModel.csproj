@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BaseModel\" />
+    <None Remove="Master\" />
+    <None Remove="Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseModel\" />
+    <Folder Include="Master\" />
+    <Folder Include="Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PreciousPoint.Models.DataModel\PreciousPoint.Models.DataModel.csproj" />
+  </ItemGroup>
+</Project>

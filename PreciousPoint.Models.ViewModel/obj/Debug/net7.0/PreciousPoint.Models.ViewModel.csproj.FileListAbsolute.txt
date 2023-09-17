@@ -1,0 +1,15 @@
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/bin/Debug/net7.0/PreciousPoint.Models.ViewModel.deps.json
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/bin/Debug/net7.0/PreciousPoint.Models.ViewModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/bin/Debug/net7.0/PreciousPoint.Models.ViewModel.pdb
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/bin/Debug/net7.0/PreciousPoint.Models.DataModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/bin/Debug/net7.0/PreciousPoint.Models.DataModel.pdb
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.csproj.AssemblyReference.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.AssemblyInfoInputs.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.AssemblyInfo.cs
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.csproj.CoreCompileInputs.cache
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.csproj.CopyComplete
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/refint/PreciousPoint.Models.ViewModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.pdb
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/ref/PreciousPoint.Models.ViewModel.dll

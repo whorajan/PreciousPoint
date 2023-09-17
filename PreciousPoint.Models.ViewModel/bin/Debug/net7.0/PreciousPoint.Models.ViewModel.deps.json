@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PreciousPoint.Models.ViewModel/1.0.0": {
+        "dependencies": {
+          "PreciousPoint.Models.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "PreciousPoint.Models.ViewModel.dll": {}
+        }
+      },
+      "PreciousPoint.Models.DataModel/1.0.0": {
+        "runtime": {
+          "PreciousPoint.Models.DataModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PreciousPoint.Models.ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PreciousPoint.Models.DataModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
