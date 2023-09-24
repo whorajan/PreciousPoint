@@ -1,12 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 using PreciousPoint.Models.DataModel.Master;
 
 namespace PreciousPoint.Models.DataModel.Account
 {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-  public class User
+#pragma warning disable CS8618
+  [Table(nameof(User))]
+  public class User : IdentityUser<int>
   {
-    public int Id { get; set; }
 
     [Required]
     public string FirstName { get; set; }
@@ -15,13 +17,9 @@ namespace PreciousPoint.Models.DataModel.Account
 
     public string? LastName { get; set; }
 
-    [Required]
-    [EmailAddress]
-    public string Email { get; set; }
-
-    public string? PhoneNo { get; set; }
-
     public Address? Address { get; set; }
+
+    public virtual ICollection<UserRole>? Roles { get; set; }
   }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable
+#pragma warning restore CS8618
 }

@@ -3,16 +3,19 @@ using PreciousPoint.Models.ViewModel.Master;
 
 namespace PreciousPoint.Models.ViewModel.Account
 {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning disable CS8618
   public class UserViewModel
   {
     public int Id { get; set; }
 
     [Required]
+    [MaxLength(30,ErrorMessage ="First Name should be 30 characters max")]
     public string FirstName { get; set; }
 
+    [MaxLength(30,ErrorMessage = "Middle Name should be 30 characters max")]
     public string? MiddleName { get; set; }
 
+    [MaxLength(30,ErrorMessage = "Last Name should be 30 characters max")]
     public string? LastName { get; set; }
 
     [Required]
@@ -23,5 +26,5 @@ namespace PreciousPoint.Models.ViewModel.Account
 
     public AddressViewModel? Address { get; set; }
   }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable
+#pragma warning restore CS8618
 }

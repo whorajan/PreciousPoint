@@ -13,3 +13,4 @@
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/refint/PreciousPoint.Models.ViewModel.dll
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.pdb
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/ref/PreciousPoint.Models.ViewModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.ViewModel/obj/Debug/net7.0/PreciousPoint.Models.ViewModel.sourcelink.json

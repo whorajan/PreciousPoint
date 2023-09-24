@@ -2,7 +2,7 @@
 
 namespace PreciousPoint.Models.ViewModel.Master
 {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning disable CS8618
   public class AddressViewModel
   {
     public int Id { get; set; }
@@ -32,6 +32,6 @@ namespace PreciousPoint.Models.ViewModel.Master
 
     public CityViewModel? City { get; set; }
   }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning restore CS8618
 
 }
