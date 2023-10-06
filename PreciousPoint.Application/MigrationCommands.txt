@@ -1,0 +1,11 @@
+﻿-- Add a migration file
+dotnet ef migrations add AccountModelMigrations -o DataLayer/Migrations
+
+--Remove migrations
+dotnet ef migrations remove
+
+--Drop Database
+dotnet ef database drop
+
+--Update Database
+dotnet ef database update

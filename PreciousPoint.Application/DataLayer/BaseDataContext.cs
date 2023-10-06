@@ -1,15 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PreciousPoint.Models.DataModel.Account;
 
 namespace PreciousPoint.Application.DataLayer
 {
-  public class BaseDataContext : DbContext
+  public class BaseDataContext : IdentityDbContext<User, Role, int,
+        IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>,
+        IdentityRoleClaim<int>, IdentityUserToken<int>>
   {
-    public BaseDataContext(DbContextOptions<BaseDataContext> options) :base(options)
+    public BaseDataContext(DbContextOptions<BaseDataContext> options) : base(options)
     {
     }
-    public DbSet<User> Users { get; set; }
+
+
+    //public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

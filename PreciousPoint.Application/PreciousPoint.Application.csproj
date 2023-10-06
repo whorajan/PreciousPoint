@@ -8,6 +8,7 @@
     <SpaProxyServerUrl>https://localhost:44489</SpaProxyServerUrl>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8c293171-5d88-41fd-8384-6ee3420cc650</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.11" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,14 +28,25 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <None Remove="DataLayer\" />
     <None Remove="Extensions\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Interfaces\Repository\" />
+    <None Remove="Services\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="DataLayer\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Repository\" />
+    <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PreciousPoint.Models.ViewModel\PreciousPoint.Models.ViewModel.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\PreciousPoint.Helpers\PreciousPoint.Helpers.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
