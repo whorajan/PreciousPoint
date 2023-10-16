@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using PreciousPoint.Models.DataModel.Account;
 using PreciousPoint.Models.ViewModel.Master;
 
 namespace PreciousPoint.Models.ViewModel.Account
@@ -24,7 +25,12 @@ namespace PreciousPoint.Models.ViewModel.Account
 
     public string? PhoneNo { get; set; }
 
+    public string Token { get; set; }
+
     public AddressViewModel? Address { get; set; }
+
+    public ICollection<RoleViewModel>? Roles { get; set; }
+
   }
 #pragma warning restore CS8618
 }

@@ -10,3 +10,4 @@
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/refint/PreciousPoint.Models.DataModel.dll
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.pdb
 /Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/ref/PreciousPoint.Models.DataModel.dll
+/Users/whorajan/Projects/BuildingPP/PreciousPoint/PreciousPoint.Models.DataModel/obj/Debug/net7.0/PreciousPoint.Models.DataModel.sourcelink.json

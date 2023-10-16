@@ -1,14 +1,19 @@
-﻿using PreciousPoint.Models.DataModel.Account;
+﻿using Microsoft.AspNetCore.Mvc;
+using PreciousPoint.Models.DataModel.Account;
+using PreciousPoint.Models.ViewModel.Account;
 
 namespace PreciousPoint.Application.Interfaces.Repository
 {
   public interface IUserRepository
   {
-    void Update(User user);
 
     Task<User?> GetUserByIdAsync(int id);
 
     Task<User?> GetUserByUserNameAsync(string userName);
+
+    Task<bool> EmailAlreadyExists(string email);
+
+    Task<Role?> GetRegistrationDefaultRole();
   }
 }
 

@@ -1,6 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PreciousPoint.Application.DataLayer;
+using PreciousPoint.Application.Interfaces.Repository;
+using PreciousPoint.Application.Interfaces.Services;
+using PreciousPoint.Application.Services;
 
 namespace PreciousPoint.Application.Extensions
 {
@@ -13,8 +15,9 @@ namespace PreciousPoint.Application.Extensions
 
       services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+      services.AddScoped<IUserRepository, UserRepository>();
+      services.AddScoped<ITokenService, TokenServices>();
       return services;
     }
   }
 }
-

@@ -12,6 +12,8 @@ namespace PreciousPoint.Application.Helpers
       CreateMap<RegisterModel, User>()
         .ForMember(dest => dest.PhoneNumber,
           opt => opt.MapFrom(src => src.PhoneNo));
+
+      CreateMap<User, UserViewModel>();
     }
   }
 }

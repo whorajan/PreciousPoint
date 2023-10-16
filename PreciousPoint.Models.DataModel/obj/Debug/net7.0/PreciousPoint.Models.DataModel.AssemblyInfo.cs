@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PreciousPoint.Models.DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29581f8a2a66649d94866043238b499cbd30f624")]
 [assembly: System.Reflection.AssemblyProductAttribute("PreciousPoint.Models.DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PreciousPoint.Models.DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

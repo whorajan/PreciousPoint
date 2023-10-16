@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PreciousPoint.Application.Interfaces.Repository;
+using PreciousPoint.Helpers.EmailCommunication;
 using PreciousPoint.Models.DataModel.Account;
 
 namespace PreciousPoint.Application.Services
@@ -7,25 +8,32 @@ namespace PreciousPoint.Application.Services
   public class UserRepository : IUserRepository
   {
     private readonly UserManager<User> _userManager;
+    private readonly RoleManager<Role> _roleManager;
 
-    public UserRepository(UserManager<User> userManager)
+    public UserRepository(UserManager<User> userManager, RoleManager<Role> roleManager)
     {
       _userManager = userManager;
+      _roleManager = roleManager;
     }
 
-    public Task<User?> GetUserByIdAsync(int id)
+    public async Task<User?> GetUserByIdAsync(int id)
     {
-      return _userManager.FindByIdAsync(id.ToString());
+      return await _userManager.FindByIdAsync(id.ToString());
     }
 
-    public Task<User?> GetUserByUserNameAsync(string userName)
+    public async Task<User?> GetUserByUserNameAsync(string userName)
     {
-      return _userManager.FindByNameAsync(userName);
+      return await _userManager.FindByNameAsync(userName);
     }
 
-    public void Update(User user)
+    public async Task<bool>  EmailAlreadyExists(string emailId)
     {
+      return await _userManager.FindByEmailAsync(emailId) != null;
+    }
 
+    public async Task<Role?> GetRegistrationDefaultRole()
+    {
+      return await _roleManager.FindByNameAsync("user");
     }
   }
 }

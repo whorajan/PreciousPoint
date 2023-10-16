@@ -9,11 +9,13 @@ internal class Program
     // Add services to the container.
 
     builder.Services.AddApplicationServices(builder.Configuration);
-    builder.Services.AddIdentityServices();
+    builder.Services.AddIdentityServices(builder.Configuration);
 
     builder.Services.AddControllersWithViews();
 
     var app = builder.Build();
+    app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowCredentials()
+    .WithOrigins("https://localhost:7227"));
 
     // Configure the HTTP request pipeline.
     if (!app.Environment.IsDevelopment())
@@ -27,12 +29,14 @@ internal class Program
     app.UseRouting();
 
 
+    app.UseAuthentication();
+    app.UseAuthorization();
+
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller}/{action=Index}/{id?}");
 
     app.MapFallbackToFile("index.html");
-
     app.Run();
   }
 }

@@ -22,6 +22,11 @@ namespace PreciousPoint.Models.ViewModel.Account
 
     [MaxLength(15,ErrorMessage = "Phone No. should be 15 characters max")]
     public string? PhoneNo { get; set; }
+
+    [Required]
+    [DataType(DataType.Password)]
+    [StringLength(15,ErrorMessage ="Password must be between 7 and 15 characters",MinimumLength =7)]
+    public string Password { get; set; }
   }
 #pragma warning restore CS8618
 }

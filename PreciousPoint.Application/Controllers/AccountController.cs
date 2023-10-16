@@ -1,9 +1,11 @@
-﻿using System.Net;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PreciousPoint.Application.Interfaces.Repository;
+using PreciousPoint.Application.Interfaces.Services;
 using PreciousPoint.Helpers.EmailCommunication;
 using PreciousPoint.Models.DataModel.Account;
 using PreciousPoint.Models.ViewModel.Account;
@@ -16,27 +18,32 @@ namespace PreciousPoint.Application.Controllers
     private readonly RoleManager<Role> _roleManager;
     private readonly IConfiguration _configuration;
     private readonly IMapper _mapper;
+    private readonly IUserRepository _userRepository;
+    private readonly ITokenService _tokenService;
 
-    public AccountController(UserManager<User> userManager, RoleManager<Role> roleManager, IConfiguration configuration, IMapper mapper)
+    public AccountController(UserManager<User> userManager, RoleManager<Role> roleManager, IConfiguration configuration,
+      IMapper mapper, IUserRepository userRepository, ITokenService tokenService)
     {
       _userManager = userManager;
       _roleManager = roleManager;
       _configuration = configuration;
       _mapper = mapper;
+      _userRepository = userRepository;
+      _tokenService = tokenService;
     }
 
     [HttpPost("register")]
-    public async Task<ActionResult<User>> Register(RegisterModel user)
+    public async Task<ActionResult<User>> Register([FromBody] RegisterModel user)
     {
       if (user is not null && !string.IsNullOrEmpty(user.Email))
       {
-        if (!await EmailAlreadyInUse(user.Email))
+        if (!await _userRepository.EmailAlreadyExists(user.Email))
         {
           var newUser = _mapper.Map<User>(user);
           newUser.UserName = user.Email;
-          var result = await _userManager.CreateAsync(newUser);
+          var result = await _userManager.CreateAsync(newUser, user.Password);
           if (!result.Succeeded) return BadRequest(result.Errors);
-          var role = await GetRegistrationDefaultRole();
+          var role = await _userRepository.GetRegistrationDefaultRole();
           if (role is not null && !string.IsNullOrEmpty(role.Name))
           {
             result = await _userManager.AddToRoleAsync(newUser, role.Name);
@@ -77,18 +84,21 @@ namespace PreciousPoint.Application.Controllers
     {
       var user = await _userManager.FindByEmailAsync(email);
       if (user is null) return NotFound();
+      if (user.EmailConfirmed) return Ok("Email already verified");
       var result = await _userManager.ConfirmEmailAsync(user, token);
-      if (result.Succeeded) return Ok("Email successfully confirmed");
+      if (result.Succeeded) return Ok("Email successfully verified");
       else return StatusCode(500, "Unable to process the request");
     }
 
-    //TODO This is temporary, will remove this in sometime. 
+    //TODO This is temporary, will remove this in sometime.
+    [Authorize]
     [HttpGet("get-users-list")]
     public async Task<IEnumerable<User>> GetUsers()
     {
       return await _userManager.Users.ToListAsync();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("role/{name}")]
     public async Task<ActionResult<Role>> CreateRole(string name)
     {
@@ -101,16 +111,17 @@ namespace PreciousPoint.Application.Controllers
       else return BadRequest(result.Errors);
     }
 
-    //TODO Change it to actual implementation of default role. 
-    private async Task<Role?> GetRegistrationDefaultRole()
+    [HttpPost("login")]
+    public async Task<ActionResult<UserViewModel>> Login([FromBody]LoginModel login)
     {
-      return await _roleManager.FindByNameAsync("user");
+      var user = await _userManager.Users.SingleOrDefaultAsync(x => x.NormalizedUserName == login.UserName.ToUpper());
+      if (user is null)
+        return Unauthorized("User not found");
+      var result = await _userManager.CheckPasswordAsync(user, login.Password);
+      if (!result) return Unauthorized("Invalid user name or password");
+      var userViewModel =  _mapper.Map<User, UserViewModel>(user);
+      userViewModel.Token = await _tokenService.CreateToken(user);
+      return Ok(userViewModel);
     }
-
-    private async Task<bool> EmailAlreadyInUse(string emailId)
-    {
-      return await _userManager.FindByEmailAsync(emailId) != null;
-    }
-
   }
 }
