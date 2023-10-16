@@ -98,7 +98,7 @@ namespace PreciousPoint.Application.Controllers
       return await _userManager.Users.ToListAsync();
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     [HttpPost("role/{name}")]
     public async Task<ActionResult<Role>> CreateRole(string name)
     {
